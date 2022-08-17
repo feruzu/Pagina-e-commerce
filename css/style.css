@@ -1,0 +1,345 @@
+html{
+    height: 100%;
+    box-sizing: border-box;    
+    scroll-behavior: smooth;
+   
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+:root {
+    --blanco: #FFF;
+    --oscuro: #212121; 
+    --rojo: #B80C09 ;
+    --fondo: #f7f7f7;
+    --celeste: #5aa89b;
+}
+
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    background-color: var(--fondo);
+    margin: auto;    
+    width: 100%;
+    
+    
+}
+
+h1 {
+    font-size: 1.5em;
+    color: var(--oscuro);
+    letter-spacing: 10px;
+    font-weight: normal;
+    margin-bottom: 0%;
+
+}
+
+h2 {
+    font-size: 1.8em;
+    font-family: 'Prata', serif;
+    line-height: 1.5;
+    margin-top: 0%;
+}
+
+h3 {
+    font-size: 1.4em;
+    font-weight: normal;
+
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+.navegacion-principal{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 37%;    
+}
+
+.navegacion-principal a{
+    color: var(--oscuro);
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    padding: 5px 20px; 
+    font-weight: bold;  
+}  
+
+.navegacion-principal a:hover, .boton:hover{
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    transition-duration: 1.2s; 
+}
+
+.contenido-hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url(../img/hero.jpg);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-position: center center;
+    -webkit-box-shadow: 10px 10px 21px -8px rgba(0,0,0,0.53);
+    -moz-box-shadow: 10px 10px 21px -8px rgba(0,0,0,0.53);
+    box-shadow: 10px 10px 21px -8px rgba(0,0,0,0.53);
+}
+
+.boton{
+    background-color: var(--blanco);
+    color:var(--oscuro);
+    padding: 5px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main {
+    padding: 100px;
+    margin-top:4%;
+    margin-bottom: 4%;
+
+}
+
+
+/** Servicios **/
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 100px;
+    text-align: center;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.servicio h3 {
+    color: var(--celeste);
+
+}
+
+.servicio p{
+    line-height: 2;
+}
+
+.servicio .iconos {
+     width: 150px; 
+     height: 150px; 
+     background-color: var(--oscuro);
+     border-radius: 50%;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     -webkit-box-shadow: 10px 10px 21px -8px rgba(0,0,0,0.53);
+     -moz-box-shadow: 10px 10px 21px -8px rgba(0,0,0,0.53);
+     box-shadow: 10px 10px 21px -8px rgba(0,0,0,0.53);
+}
+
+/**   Formulario de contacto  **/
+
+#contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    background-position: center center;
+}
+
+.formulario {
+    width: min( 600px, 100%);  
+    margin: 0 auto;
+    padding: 25px;   
+    
+}
+
+.formulario fieldset {
+    border: none;
+    font-weight: bold;  
+}
+
+.formulario legend {
+    text-align: center;
+    color: var(--celeste);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700px;
+    margin-bottom: 20px;
+}
+
+.campo{
+    margin-bottom: 10px;
+}
+
+.campo label {
+    color: var(--oscuro);
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.campo textarea {
+    height: 140px;
+    resize: none;
+}
+
+.input-text {
+    border-radius: 15px;
+    padding: 15px;
+    width: 100%;
+    background: #e7e7e7b4;
+    box-shadow: inset -3px -3px 7px #f1f1f1, inset 3px 3px 7px #bebebe98;   
+    position: relative; 
+    border: none;
+}
+
+.input-text:focus{
+    outline: none !important;
+    background: #e7e7e7b4;
+    box-shadow: -3px -3px 7px #f1f1f1, 3px 3px 7px #bebebe98; 
+    
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+.contenedor-campos {
+    display: grid;
+    margin: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 60%;
+    column-gap: 10px;
+    margin-bottom: 10%;
+}
+
+
+ /**    Campo correo de columna 1 a la 3    **/
+.campo:nth-child(3),
+.campo:nth-child(4) {
+    grid-column: 1 / 3; 
+}
+
+.enviar .boton {
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 10%;
+    border: 2px solid var(--oscuro);
+}
+
+/**  Footer   **/
+.footer {
+    margin-top: 2%;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--oscuro);
+    color: var(--fondo);  
+}
+
+input:focus { font-size: 16px!important} 
+
+
+/**        RESPONSIVE           **/
+
+@media ( max-width: 768px ){
+    .navegacion-principal{
+        flex-direction: column;
+        padding: 5% 35%;
+        text-align: center;
+    }
+
+    .boton{
+        width: 70%;
+    }
+
+    .contenido-hero h2 {
+        margin-inline: 10%;
+    }
+
+    .servicios {  
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .contenedor-campos {
+        display: block;
+    }
+    
+    .enviar .boton {
+    width: 90%;
+    margin: 5%;
+    }
+
+    
+}
+
+
+/*----Estilos usados en JS------*/
+
+.vacio{
+    border-bottom: 2px solid rgb(248, 156, 156);
+}
+
+.error{
+    border-bottom: 2px solid rgb(248, 156, 156);
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(253, 223, 223, 0.856) ;       
+}
+
+.correcto {
+    border-bottom: 2px solid rgb(55, 212, 108); 
+}
+
+.boton-enviar{
+    opacity: 50%;
+    cursor: not-allowed;
+}
+
+.boton-habilitado{
+    opacity: 100%;
+    cursor: pointer;
+}
+
+
+#load{
+    margin: auto;
+    margin-left:auto; 
+    margin-right:auto; 
+    display:none;
+    margin-bottom: 20px;
+}
+
+
+fieldset p {
+    text-align: center;
+    font-weight: lighter;
+    padding: 20px;
+    background-color: #aaddb5;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    color: var(--oscuro);
+    box-shadow: 10px 9px 16px hsl(0deg 0% 0% / 12%)
+}
